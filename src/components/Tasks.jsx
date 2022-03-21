@@ -2,7 +2,7 @@ export default function Tasks(props) {
     console.log(props.todoList)
     return (
         <div>
-            {props.todoList.map((t, index) =>
+            {props.todoList.length>0?props.todoList.map((t, index) =>
                 <div>
                     <input type="checkbox"
                         key={index}
@@ -10,7 +10,7 @@ export default function Tasks(props) {
                         onChange={() => props.changeStateofTask(t.id)}
                     />{t.title}
                 
-                </div>)}
+                </div>):"No Tasks"}
         </div>
     )
 }
