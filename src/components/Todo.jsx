@@ -1,13 +1,15 @@
-export  default function Todo() {
+import { useState } from "react"
+export  default function Todo(props) {
+    const [task,setTask]=useState("")
+    console.log("bye",task);
+    
     return (
         <div>
-            <form>
                 <h2>What needs to be done?</h2>
                 <div>
-                    <input type="text" />
-                    <button type='submit'>Add</button>
+                    <input type="text"  onChange={e => setTask(e.target.value)} />
+                    <button  onClick={e=>props.addTask(task)}>Add</button>
                 </div>
-            </form>
         </div>
     )
 }
