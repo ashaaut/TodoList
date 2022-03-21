@@ -34,9 +34,9 @@ function App() {
         <Todo addTask={e => addTask(e)} />
       </div>
       <div className='state-tasks'>
-        <button type='button' onClick={e => setFilterAction("all")}>All tasks</button>
-        <button type='button' onClick={e => setFilterAction("activeTasks")}>Active tasks</button>
-        <button type='button' onClick={e => setFilterAction("completedTasks")}>Completed tasks</button>
+        <button className='action-btn' type='button' onClick={e => setFilterAction("all")}>All tasks</button>
+        <button className='action-btn' type='button' onClick={e => setFilterAction("activeTasks")}>Active tasks</button>
+        <button className='action-btn' type='button' onClick={e => setFilterAction("completedTasks")}>Completed tasks</button>
       </div>
       <div className='tasks'>
         <Tasks todoList={getFilteredTasks(filterAction)}  changeStateofTask={changeStateofTask}/>

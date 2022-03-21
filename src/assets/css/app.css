@@ -18,11 +18,11 @@ body{
   /* background-color: aquamarine; */
 }
 .state-tasks{
-  height: 5%;
+  height: 10%;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 2px;
   /* background-color: blueviolet; */
 }
 .list-tasks{
@@ -34,6 +34,17 @@ form{
   display: flex;
   flex-direction: column;
 }
+.action-btn{
+  margin-left: 3%;
+  width: 10%;
+  height: 50%;
+  font-size: 15px;
+  border-radius: 10px;
+}
 
+.action-btn:focus{
+  box-shadow: 2px 2px 2px 2px gray;
+  /* background:olive; */
+}
 
 
